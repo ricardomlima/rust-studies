@@ -11,5 +11,9 @@ fn main() {
 
     println!("The value of y is {y}");
 
+    //retrieving elements from a tuple from its index
+    let zed = tup.2;
+
+    println!("The value of z is {zed}");
 
 }
