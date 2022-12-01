@@ -29,4 +29,9 @@ fn main() {
 
     // inner scopes do not shadow outer scopes
     println!("The value of z is: {z}");
+
+    // shadowing allows changing variable type which only works for shadowing 
+    // and not for mutable variables
+    let spaces = "   ";
+    let spaces = spaces.len();
 }
