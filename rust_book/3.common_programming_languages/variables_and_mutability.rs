@@ -11,4 +11,6 @@ fn main() {
     y = 25;
     println!("The value of y is: {y}");
 
+    // constants cannot be changed and must be in uppercase by convention
+    const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
 }
