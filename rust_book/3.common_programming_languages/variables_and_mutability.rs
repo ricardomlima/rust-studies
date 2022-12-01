@@ -13,4 +13,20 @@ fn main() {
 
     // constants cannot be changed and must be in uppercase by convention
     const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
+
+    // shadowing
+    let z = 5;
+
+    // z has been shadowed
+    let z = z + 1;
+
+    {
+        // inner scope borrowing the value from the outer scope
+        // but not shadowing the outer scope
+        let z = z * 2;
+        println!("The value of z in the inner scope is: {z}");
+    }
+
+    // inner scopes do not shadow outer scopes
+    println!("The value of z is: {z}");
 }
