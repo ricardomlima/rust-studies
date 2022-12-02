@@ -31,6 +31,9 @@ fn main() {
         x + 1
     };
     println!("The value of y_block is: {y_block}");
+
+    let five_plus_one: i32 = five_plus(1);
+    println!("the value of five_plus_one is {five_plus_one}");
 }
 
 fn another_function() {
@@ -40,4 +43,9 @@ fn another_function() {
 // in functions parameters must be declared with types!
 fn another_function_parameters(value: i32, unit_label: char) {
     println!("The measurement is: {value}{unit_label}")
+}
+
+// function with return type
+fn five_plus(x: i32) -> i32 {
+    5 + x
 }
