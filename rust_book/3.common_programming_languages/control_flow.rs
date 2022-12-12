@@ -16,4 +16,27 @@ fn main() {
     } else {
         println!("not divisible by 4 neither 3");
     }
+
+    /*
+        Using if in statements
+    */
+    let condition = true;
+    let number = if condition { 5 } else { 6 };
+
+    println!("the value of number is: {number}");
+
+    /*
+        Repeating code with loop
+    */
+    let mut counter: isize = 0;
+
+    let result = loop {
+        counter += 1;
+
+        if counter == 10 {
+            // here we return an expression with the break
+            break counter * 2;
+        }
+    };
+    println!("the result is {result}");
 }
