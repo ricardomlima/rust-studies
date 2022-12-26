@@ -21,4 +21,15 @@ fn main() {
     };
 
     println!("The other username is {}", user2.username);
+
+    /*
+     * Tuple structs
+     *
+     */
+
+    struct Color(i32, i32, i32);
+    struct Point(i32, i32, i32);
+
+    let black = Color(0, 0, 0);
+    let origin = Point(0, 0, 0);
 }
