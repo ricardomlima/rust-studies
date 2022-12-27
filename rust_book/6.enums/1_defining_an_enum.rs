@@ -25,11 +25,17 @@ fn divide(numerator: f64, denominator: f64) -> Option<f64> {
     }
 }
 
+#[derive(Debug)]
+enum UsState {
+    Alabama,
+    Alaska,
+}
+
 enum Coin {
     Penny,
     Nickel,
     Dime,
-    Quarter,
+    Quarter(UsState),
 }
 
 fn value_in_cents(coin: Coin) -> u8 {
@@ -40,7 +46,10 @@ fn value_in_cents(coin: Coin) -> u8 {
         }
         Coin::Nickel => 5,
         Coin::Dime => 10,
-        Coin::Quarter => 25,
+        Coin::Quarter(state) => {
+            println!("State quarter from {:?}! ", state);
+            25
+        }
     }
 }
 
@@ -68,4 +77,6 @@ fn main() {
     // This is how we assign when using Optional enum
     // using the Some variant
     let _absent_variable: Option<String> = Some(String::from("This is a string"));
+
+    let _coin_info: u8 = value_in_cents(Coin::Quarter(UsState::Alaska));
 }
