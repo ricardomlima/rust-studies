@@ -45,4 +45,8 @@ fn main() {
     // using the built-in Option enum
     let mut _absent_number: Option<f64> = None;
     _absent_number = divide(10.0, 5.0);
+
+    // This is how we assign when using Optional enum
+    // using the Some variant
+    let _absent_variable: Option<String> = Some(String::from("This is a string"));
 }
